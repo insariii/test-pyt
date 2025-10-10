@@ -1,0 +1,49 @@
+# 1
+
+a = len(input())
+b = len(input())
+if a == b:
+    print('Строки равны по длине')
+elif a > b:
+    print('Первая длиннее второй')
+else:
+    print('Вторая длиннее первой')
+
+# 2
+
+s = input().rstrip().strip()
+print(len(s.split()))
+print(s.upper())
+s = s.replace('кот', 'собака')
+s = ', '.join(s.split())
+print(s)
+
+
+# 3
+
+s = input()
+kg = 0
+g = 'аяуюоеёэи'
+for sym in s:
+    if sym in g:
+        kg += 1
+print(kg)
+
+# 4
+
+palindroms = []
+s = input().split()
+for word in s:
+    if word == word[::-1]:
+        palindroms.append(word)
+print(*palindroms)
+
+
+# 5
+
+summ = 0
+s = input()
+for sym in s:
+    if sym.isdigit():
+        summ += int(sym)
+print(summ)
